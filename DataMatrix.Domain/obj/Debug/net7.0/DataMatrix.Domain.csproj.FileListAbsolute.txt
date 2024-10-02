@@ -1,0 +1,11 @@
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrix.Domain\bin\Debug\net7.0\DataMatrix.Domain.deps.json
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrix.Domain\bin\Debug\net7.0\DataMatrix.Domain.dll
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrix.Domain\bin\Debug\net7.0\DataMatrix.Domain.pdb
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrix.Domain\obj\Debug\net7.0\DataMatrix.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrix.Domain\obj\Debug\net7.0\DataMatrix.Domain.AssemblyInfoInputs.cache
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrix.Domain\obj\Debug\net7.0\DataMatrix.Domain.AssemblyInfo.cs
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrix.Domain\obj\Debug\net7.0\DataMatrix.Domain.csproj.CoreCompileInputs.cache
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrix.Domain\obj\Debug\net7.0\DataMatrix.Domain.dll
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrix.Domain\obj\Debug\net7.0\refint\DataMatrix.Domain.dll
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrix.Domain\obj\Debug\net7.0\DataMatrix.Domain.pdb
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrix.Domain\obj\Debug\net7.0\ref\DataMatrix.Domain.dll

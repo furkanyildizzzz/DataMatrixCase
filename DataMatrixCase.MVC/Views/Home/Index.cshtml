@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Go to <a href="DataMatrix/UploadImage"> Decoding Page</a>.</p>
+</div>
+
+
+<div class="container mt-4">
+    <h3 class="d-flex justify-content-between">
+        Decoded Codes:
+        <form asp-controller="DataMatrix" asp-action="ClearAll" method="post">
+            <button type="submit" class="btn btn-danger">Clear All</button>
+        </form>
+    </h3>
+
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Download</th>
+                <th scope="col">File Name</th>
+                <th scope="col">Decoded Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var decodedItem in ViewBag.DecodedItems)
+            {
+                <tr>
+                    <td class="text-center">
+                        <button class="btn btn-primary" onclick="downloadDecodedData('@decodedItem.DecodedData', '@decodedItem.FileName')">Download as .txt</button>
+                    </td>
+                    <td class="text-center">
+                        <pre class="bg-light p-2">@decodedItem.FileName</pre>
+                    </td>
+                    <td style="max-height: 150px; overflow-y: auto; display:block;">
+                        @foreach (string decodedCode in decodedItem.DecodedData.ToString().Split('|'))
+                        {
+                            <pre class="bg-light p-2 m-0">@decodedCode</pre>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function downloadDecodedData(decodedData, fileName) {
+        // Split decodedData by '|' and join with new line
+        var formattedData = decodedData.split('|').join('\n');
+
+        // Create a new Blob with the decoded data
+        var blob = new Blob([formattedData], { type: "text/plain" });
+        var url = window.URL.createObjectURL(blob);
+
+        // Create a temporary anchor element to trigger the download
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = fileName.replace(/\.[^/.]+$/, "") + "_decoded.txt"; // Use the image file name and append "_decoded.txt"
+        document.body.appendChild(a);
+        a.click();
+
+        // Clean up the URL and remove the temporary element
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+    }
+</script>
+

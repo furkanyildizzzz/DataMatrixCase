@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Decode Image";
+    var decodedCodesJson = ViewBag.DecodedCodes != null ? System.Text.Json.JsonSerializer.Serialize(ViewBag.DecodedCodes) : "null";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Upload Image to Decode</h2>
+
+    <form asp-controller="DataMatrix" asp-action="UploadImage" enctype="multipart/form-data" method="post" class="mb-4" onsubmit="return validateFile()">
+        <div class="form-group">
+            <label for="imageFile" class="form-label">Select Image</label>
+            <input class="form-control-file" type="file" id="imageFile" name="imageFile" accept="image/*" required />
+
+        </div>
+        <button type="submit" class="btn btn-primary">Decode</button>
+    </form>
+
+    @if (ViewBag.DecodedCodes != null)
+    {
+        <h3>Decoded Codes:</h3>
+        <button class="btn btn-success" onclick="downloadDecodedCodes()">Download Decoded Codes</button>
+        <ul class="list-group mb-3">
+            @foreach (var code in ViewBag.DecodedCodes)
+            {
+                <li class="list-group-item">@code</li>
+            }
+        </ul>
+    }
+    else if(ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Error</h4>
+            <p>@ViewBag.Error</p>
+        </div>
+    }
+</div>
+
+<script>
+    // Deserialize the Razor-decoded codes
+    var decodedCodes = @Html.Raw(decodedCodesJson);
+
+    function downloadDecodedCodes() {
+        if (decodedCodes === null) {
+            alert("No decoded codes available.");
+            return;
+        }
+
+        // Join the codes with a new line
+        var formattedData = decodedCodes.join('\n');
+        
+        // Create a new Blob with the formatted data
+        var blob = new Blob([formattedData], { type: "text/plain" });
+        var url = window.URL.createObjectURL(blob);
+        
+        // Create a temporary anchor element to trigger the download
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = "decoded_codes.txt"; // The file name
+        document.body.appendChild(a);
+        a.click();
+        
+        // Clean up the URL and remove the temporary element
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+    }
+
+    function validateFile() {
+        const fileInput = document.getElementById('imageFile');
+        const filePath = fileInput.value;
+        const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i; // Define allowed extensions
+
+        // Check if the file input is empty or the extension is not allowed
+        if (!filePath) {
+            alert("Please select a file.");
+            return false;
+        } else if (!allowedExtensions.exec(filePath)) {
+            alert("Please upload an image file (JPG, JPEG, PNG, GIF).");
+            fileInput.value = ''; // Clear the input
+            return false;
+        }
+        return true; // Proceed with the form submission
+    }
+</script>

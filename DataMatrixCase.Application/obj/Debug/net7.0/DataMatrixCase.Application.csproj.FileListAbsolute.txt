@@ -1,0 +1,15 @@
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\bin\Debug\net7.0\DataMatrixCase.Application.deps.json
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\bin\Debug\net7.0\DataMatrixCase.Application.dll
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\bin\Debug\net7.0\DataMatrixCase.Application.pdb
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\bin\Debug\net7.0\DataMatrix.Domain.dll
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\bin\Debug\net7.0\DataMatrix.Domain.pdb
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\obj\Debug\net7.0\DataMatrixCase.Application.csproj.AssemblyReference.cache
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\obj\Debug\net7.0\DataMatrixCase.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\obj\Debug\net7.0\DataMatrixCase.Application.AssemblyInfoInputs.cache
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\obj\Debug\net7.0\DataMatrixCase.Application.AssemblyInfo.cs
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\obj\Debug\net7.0\DataMatrixCase.Application.csproj.CoreCompileInputs.cache
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\obj\Debug\net7.0\DataMatrixCase.Application.csproj.CopyComplete
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\obj\Debug\net7.0\DataMatrixCase.Application.dll
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\obj\Debug\net7.0\refint\DataMatrixCase.Application.dll
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\obj\Debug\net7.0\DataMatrixCase.Application.pdb
+C:\Users\furkan\Source\Repos\furkan\DataMatrixCase\DataMatrixCase.Application\obj\Debug\net7.0\ref\DataMatrixCase.Application.dll

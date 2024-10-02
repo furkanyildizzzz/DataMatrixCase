@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataMatrix.NET\src\DataMatrix.net\DataMatrix.net.csproj" />
+    <ProjectReference Include="..\DataMatrix.Domain\DataMatrix.Domain.csproj" />
+    <ProjectReference Include="..\DataMatrixCase.Application\DataMatrixCase.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="KeepDynamic.BarcodeReader">
+      <HintPath>..\..\KeepDynamic.BarCode.NetReader.Eval\Library\net4.0\KeepDynamic.BarcodeReader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
